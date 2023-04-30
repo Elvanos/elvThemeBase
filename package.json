@@ -1,0 +1,39 @@
+{
+  "name": "elvthemebase",
+  "private": true,
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=18.16.0"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc && vite build",
+    "watch": "tsc && vite build --watch",
+    "make-page": "node _commands/projectHelpers/createNewPageTemplate.js",
+    "make-component": "node _commands/projectHelpers/createNewComponent.js",
+    "make-element": "node _commands/projectHelpers/createNewElement.js",
+    "refresh-list": "node _commands/projectHelpers/manualRefreshFileList.js",
+    "insert-into-php": "node _commands/projectHelpers/insertIntoPhp.js"
+  },
+  "eslintIgnore": [
+    "**/projectHelpers/templates/**"
+  ],
+  "devDependencies": {
+    "@types/node": "^14.18.42",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "app-root-path": "^3.1.0",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.39.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "open": "^9.1.0",
+    "pretty-error": "^4.0.0",
+    "sass": "^1.62.0",
+    "stylelint": "^14.13.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.0"
+  }
+}

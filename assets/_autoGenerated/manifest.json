@@ -1,0 +1,14 @@
+{
+  "_src/main.css": {
+    "file": "main-204bd26a.css",
+    "src": "_src/main.css"
+  },
+  "_src/main.ts": {
+    "css": [
+      "main-204bd26a.css"
+    ],
+    "file": "main-a6828f65.js",
+    "isEntry": true,
+    "src": "_src/main.ts"
+  }
+}

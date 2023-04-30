@@ -1,0 +1,202 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Vite Watch (NVM)",
+			"type": "shell",
+			"command": "nvm use v18.16.0;cd '${cwd}';npm run watch",
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"runOptions": {}
+		},
+		{
+			"label": "Vite Watch (No NVM)",
+			"type": "shell",
+			"command": "cd '${cwd}';npm run watch",
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"runOptions": {}
+		},
+		{
+			"label": "Vite Build (NVM)",
+			"type": "shell",
+			"command": "nvm use v18.16.0;cd '${cwd}';npm run build",
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			}
+		},
+		{
+			"label": "Vite Build (No NVM)",
+			"type": "shell",
+			"command": "cd '${cwd}';npm run build",
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			}
+		},
+		{
+			"label": "Theme Helper: Refresh list (manual)",
+			"type": "shell",
+			"command": "npm",
+			"presentation": {
+				"reveal": "silent",
+				"panel": "shared"
+			},
+			"args": [
+				"run",
+				"refresh-list"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "Theme Helper: Make new Page Template",
+			"type": "shell",
+			"command": "npm",
+			"presentation": {
+				"reveal": "silent",
+				"panel": "shared"
+			},
+			"args": [
+				"run",
+				"make-page",
+				"${input:fileName}",
+				"'${input:TemplateName}'",
+				"${input:generateSCSS}",
+				"${input:generateTS}"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "Theme Helper: Make new Component",
+			"type": "shell",
+			"command": "npm",
+			"presentation": {
+				"reveal": "silent",
+				"panel": "shared"
+			},
+			"args": [
+				"run",
+				"make-component",
+				"${input:fileName}",
+				"${input:generatePHP}",
+				"${input:generateSCSS}",
+				"${input:generateTS}",
+				"${input:generateSubFiles}"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "Theme Helper: Make new Element",
+			"type": "shell",
+			"command": "npm",
+			"presentation": {
+				"reveal": "silent",
+				"panel": "shared"
+			},
+			"args": [
+				"run",
+				"make-element",
+				"${input:fileName}",
+				"${input:generatePHP}",
+				"${input:generateSCSS}",
+				"${input:generateTS}"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "Theme Helper: Insert into PHP",
+			"type": "shell",
+			"command": "npm",
+			"presentation": {
+				"reveal": "silent",
+				"panel": "shared"
+			},
+			"args": [
+				"run",
+				"insert-into-php",
+				"${input:insertList}",
+				"${input:phpWrap}",
+				"${file}",
+				"${lineNumber}"
+			],
+			"problemMatcher": []
+		}
+	],
+	"inputs": [
+		{
+			"type": "pickString",
+			"id": "insertList",
+			"description": "What do you want to insert?",
+			"options": [
+				"Element: button",
+				"Element: dynamicActionLink",
+				"Element: image"
+			]
+		},
+		{
+			"type": "pickString",
+			"id": "phpWrap",
+			"description": "Wrap with PHP tag?",
+			"options": [
+				"Yes",
+				"No"
+			],
+			"default": "No"
+		},
+		{
+			"type": "pickString",
+			"id": "generatePHP",
+			"description": "Generate PHP file?",
+			"options": [
+				"Yes",
+				"No"
+			],
+			"default": "Yes"
+		},
+		{
+			"type": "pickString",
+			"id": "generateSCSS",
+			"description": "Generate SCSS file?",
+			"options": [
+				"Yes",
+				"No"
+			],
+			"default": "Yes"
+		},
+		{
+			"type": "pickString",
+			"id": "generateTS",
+			"description": "Generate TS file?",
+			"options": [
+				"Yes",
+				"No"
+			],
+			"default": "Yes"
+		},
+		{
+			"type": "pickString",
+			"id": "generateSubFiles",
+			"description": "Generate Sub-files?",
+			"options": [
+				"Yes",
+				"No"
+			],
+			"default": "Yes"
+		},
+		{
+			"type": "promptString",
+			"id": "fileName",
+			"description": "New file name (uppercaseSyntax ideally)"
+		},
+		{
+			"type": "promptString",
+			"id": "TemplateName",
+			"description": "New humanly readable template name"
+		}
+	]
+}

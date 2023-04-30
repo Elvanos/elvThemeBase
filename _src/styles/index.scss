@@ -1,0 +1,26 @@
+/* Vendors */
+@import "./vendors/normalize.scss";
+
+/* Globals - Generic */
+@import "./globals/variables.scss";
+@import "./globals/mixins.scss";
+@import "./globals/fonts.scss";
+@import "./globals/animations.scss";
+
+/* Globals - Tweaks */
+@import "./globals/tweaksVendor.scss";
+@import "./globals/tweaksHtmlElement.scss";
+@import "./globals/tweaksWpCore.scss";
+@import "./globals/tweaksWpPlugins.scss";
+
+/* Layout */
+@import "./layout/footer.scss";
+@import "./layout/header.scss";
+@import "./layout/pageContent.scss";
+
+/* Elements */
+@import "./elements/button.scss";
+
+/* Components */
+
+/* Page Templates */

@@ -1,0 +1,91 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "ignorePatterns": [
+    "vite.config.js",
+    "_plugins-and-libs/**",
+    "_commands/**",
+    "Wordpress/**"
+  ],
+  "extends": [
+    "standard",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "tsconfigRootDir": ".",
+    "project": [
+      "./tsconfig.json"
+    ]
+  },
+  "rules": {
+    "@typescript-eslint/ban-ts-comment": 0,
+    "no-new": 0,
+    "indent": "off",
+    "@typescript-eslint/indent": [
+      "error",
+      2
+    ],
+    "keyword-spacing": 1,
+    "no-unused-vars": 0,
+    "padded-blocks": 1,
+    "no-multiple-empty-lines": 1,
+    "prefer-const": 0,
+    "quotes": 1,
+    "space-before-blocks": 1,
+    "eol-last": 1,
+    "space-before-function-paren": 1,
+    "no-multi-spaces": 1,
+    "space-in-parens": 1,
+    "comma-spacing": 1,
+    "space-infix-ops": 1,
+    "comma-dangle": 1,
+    "camelcase": 0,
+    "no-debugger": 0,
+    "semi": [
+      1,
+      "never"
+    ],
+    "no-trailing-spaces": "warn",
+    "no-unsafe-any": 0,
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": [
+      0
+    ],
+    "@typescript-eslint/no-unsafe-assignment": [
+      0
+    ],
+    "@typescript-eslint/no-unsafe-call": [
+      0
+    ],
+    "@typescript-eslint/no-unsafe-member-access": [
+      0
+    ],
+    "@typescript-eslint/no-var-requires": [
+      0
+    ],
+    "@typescript-eslint/restrict-template-expressions": [
+      0
+    ],
+    "brace-style": [
+      1,
+      "stroustrup",
+      {
+        "allowSingleLine": true
+      }
+    ]
+  }
+}
